@@ -88,10 +88,13 @@ body {
     margin: 0 auto;
     padding: 20px;
   }
+
+
   .destacado {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+    color: #000000;
   }
   .destacado-item {
     width: 48%;
@@ -124,6 +127,13 @@ body {
     font-weight: bold;
     font-size: 16px;
   }
+  .precio-info{
+    display: flex;
+    align-items: center;
+    .precio-text{
+      margin: 0;
+    }
+  }
 
   @media (max-width: 768px) {
     .destacado {
@@ -132,6 +142,7 @@ body {
     .destacado-item {
       width: 100%;
       margin-bottom: 20px;
+      flex-direction: column;
     }
     .destacado-item img {
       width: 100%;

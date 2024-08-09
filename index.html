@@ -13,31 +13,40 @@
   <title>Viajes2</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#">
             <img src="assets/img/viajes.svg" alt="Viajes Chile Logo" class="h-10 w-10 mr-2">
             <span class="text-lg font-bold text-white">Viajes Chile</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        </a> 
+      <button class="navbar-toggler" type="button" id="navbarToggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#inicio">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#quienes-somos">Quiénes Somos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#destacados">Destacados</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#contacto">Contacto</a>
-                </li>
-            </ul>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Contenido del menú de navegación -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+              <a class="nav-link text-white" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link text-white" href="#quienes-somos">Quiénes Somos</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link text-white" href="#destacados">Destacados</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link text-white" href="#contacto">Contacto</a>
+          </li>
+      </ul>
+      <script>
+        const navbarToggler = document.getElementById('navbarToggler');
+      
+        navbarToggler.addEventListener('click', () => {
+          const navbarNav = document.getElementById('navbarNav');
+          navbarNav.classList.toggle('collapse');
+        });
+      </script>
+      </div>
     </div>
 </nav>
    <div id="carouselExampleIndicators" class="carousel slide custom-carousel" data-bs-ride="carousel">
@@ -80,8 +89,10 @@
 </div>
     <main>
       <section id="quienes-somos" class="container my-5">
-        <h2 class="text-center mb-4">¿Quiénes somos?</h2>
-        <hr class="custom-hr">
+        <div class="text-center mt-5 mb-3">
+          <h4>¿Quiénes Somos?</h4>
+          <div class="border-top mt-3 mb-4"></div>
+      </div> 
         <br>
         <div class="row">
             <div class="col-md-6">
@@ -92,16 +103,20 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eaque, repudiandae debitis? Reprehenderit nesciunt dignissimos maxime sed nobis commodi nisi blanditiis labore facere et numquam eius qui rem cum explicabo, fuga excepturi sint exercitationem optio corrupti sunt eos molestias ipsum. Quibusdam alias porro iusto illo voluptate sint accusantium minus doloribus sequitur.</p>
             </div>
         </div>
-        <h2 class="text-center mb-3">¿Destacados?</h2>
-    </section>
-          <div class="border-top mt-3 mb-4"></div> 
+        <div class="text-center mt-5 mb-3">
+          <h4>Destacados</h4>
+          <div class="border-top mt-3 mb-4"></div>
+      </div>
             <div class="destacado">
               <div class="destacado-item">
                 <img src="assets/img/card1.jpg" alt="Región de los lagos">
                 <div class="destacado-info">
                   <h3>Región de los lagos</h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe corporis quidem assumenda illo ex recusandae explicabo nisi vitae corrupti.</p>
-                  <p class="vuelos">Vuelos desde: $159.990</p>
+                  <div class="precio-info">
+                    <i class="fa-solid fa-plane fa-rotate-270"></i>
+                    <p class="precio-text"><strong>Vuelos desde: $159.990</strong></p>
+                </div>
                 </div>
               </div>
               <div class="destacado-item">
@@ -109,7 +124,10 @@
                 <div class="destacado-info">
                   <h3>Desierto de Atacama</h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe corporis quidem assumenda illo ex recusandae explicabo nisi vitae corrupti.</p>
-                  <p class="vuelos">Vuelos desde: $189.990</p>
+                  <div class="precio-info">
+                    <i class="fa-solid fa-plane fa-rotate-270"></i>
+                    <p class="precio-text"><strong>Vuelos desde: $189.990</strong></p>
+                </div>
                 </div>
               </div>
             </div>
@@ -119,7 +137,10 @@
                 <div class="destacado-info">
                   <h3>Norte grande de Chile</h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe corporis quidem assumenda illo ex recusandae explicabo nisi vitae corrupti.</p>
-                  <p class="vuelos">Vuelos desde: $289.990</p>
+                  <div class="precio-info">
+                    <i class="fa-solid fa-plane fa-rotate-270"></i>
+                    <p class="precio-text"><strong>Vuelos desde: $289.990</strong></p>
+                </div>
                 </div>
               </div>
               <div class="destacado-item">
@@ -127,7 +148,10 @@
                 <div class="destacado-info">
                   <h3>Bosque mágico</h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe corporis quidem assumenda illo ex recusandae explicabo nisi vitae corrupti.</p>
-                  <p class="vuelos">Vuelos desde: $259.990</p>
+                  <div class="precio-info">
+                    <i class="fa-solid fa-plane fa-rotate-270"></i>
+                    <p class="precio-text"><strong>Vuelos desde: $259.990</strong></p>
+                </div>
                 </div>
               </div>
             </div>
@@ -154,9 +178,12 @@
               <h3 class="person__name">Fernanda</h3>
             </div>
           </div>
+      </section>
     <section id="contacto" class="container my-5">
-      <h2 class="text-center mb-4 titulos">Contacto</h2>
-      <hr class="custom-hr">
+      <div class="text-center mt-5 mb-3">
+        <h4>Contacto</h4>
+        <div class="border-top mt-3 mb-4"></div>
+    </div>
       <div class="row">
           <div class="col-md-6">
               <form>
