@@ -1,6 +1,9 @@
+
+$ColorPrimario:  #000000;
 body {
+
 	font-family: "Roboto", sans-serif;
-	background-color: #000000;
+	background-color: $ColorPrimario;
 	max-width: 100%;
 	margin: 0%;	
 	padding: 0%;
